@@ -1,0 +1,535 @@
+:root {
+  --logo: #d4ab8b;
+  --dorado: #bca177;
+  --marron: #63421e;
+  --marron-oscuro: #333030;
+  --imagen: min(60vw, 300px);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  width: auto;
+  height: auto;
+}
+
+body {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  background-color: grey;
+  justify-content: center;
+  font-family: "Open Sans";
+}
+
+a,
+a:active,
+a:visited,
+a:hover {
+  color: white;
+  text-decoration: none !important;
+}
+
+header {
+  background-image: url(./img/imagenCentral.png);
+  background-position: top center;
+  background-size: 1200px;
+  grid-area: "header";
+  max-width: 1000px;
+}
+
+.card {
+  background: transparent;
+}
+
+header section {
+  display: grid;
+  grid-template-areas: "card";
+  align-items: center;
+  justify-items: end;
+  justify-content: space-evenly;
+  align-content: center;
+  min-height: 40vh;
+}
+
+header .foto {
+  display: none;
+}
+
+header .card {
+  grid-area: card;
+  width: 100%;
+  border: 0;
+  min-height: 90%;
+  align-items: center;
+  justify-content: center;
+}
+
+header .card p {
+  width: 80%;
+  text-align: justify;
+  color: white;
+}
+
+header .card h2 {
+  text-transform: uppercase;
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+header #banner {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+/*** Nav ***/
+
+header nav {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+}
+
+#logo-menu {
+  width: 96px;
+  height: 96px;
+}
+
+.navbar-brand {
+  color: var(--logo) !important;
+  font-family: "Varela Round";
+  font-weight: 400;
+}
+
+/*** Main ***/
+
+main {
+  max-width: 1000px;
+  padding: 0;
+  margin: 0;
+}
+
+main h4 {
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+  font-weight: 700;
+  background-color: #666666;
+  margin: 0;
+}
+
+#productos,
+#destacados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  padding: 0;
+  margin: 0;
+}
+
+#productos article,
+#destacados article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#productos h3,
+#destacados h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+#productos p,
+#destacados p {
+  text-align: justify;
+  font-size: 14px;
+}
+
+#productos .presentacion,
+#destacaados .presentacion {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#productos figure img,
+#destacados figure img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+@supports (object-fit: cover) {
+  #productos figure img,
+  #destacados figure img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+#productos figure,
+#destacados figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+#productos summary,
+#destacados summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 30px;
+  max-width: 400px;
+}
+
+/*** productos ***/
+
+#productos {
+  background-color: black;
+  color: white;
+}
+
+#productos h3 {
+  color: var(--dorado);
+}
+
+#productos p {
+  color: white;
+}
+
+#productos .presentacion {
+  color: var(--dorado);
+}
+
+#productos .mas-info {
+  border: solid 2px var(--dorado);
+  color: var(--dorado);
+}
+
+#productos figure {
+  width: 350px;
+  height: 400px;
+}
+
+#productos summary {
+  min-height: 400px;
+}
+
+/*** Destacados ***/
+
+#destacados {
+  background-color: var(--dorado);
+  color: var(--marron);
+}
+
+#destacados h3 {
+  color: var(--marron);
+}
+
+#destacados p {
+  color: black;
+}
+
+#productos .presentacion {
+  color: var(--logo);
+}
+
+#destacados summary {
+  min-height: 350px;
+}
+
+#destacados .mas-info {
+  border: solid 2px var(--marron);
+  color: var(--marron);
+}
+
+#destacados figure {
+  margin-top: 40px;
+  width: 250px;
+  height: 250px;
+}
+
+/*** Footer ***/
+
+footer {
+  background-color: var(--marron-oscuro);
+  color: white;
+  font-family: "Open Sans";
+}
+
+footer #recetas {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+footer h4 {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#recetas figure {
+  width: 100%;
+  height: var(--imagen);
+  margin: 0;
+  padding: 0;
+}
+
+#recetas .receta {
+  width: var(--imagen);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dorado);
+  margin-bottom: 40px;
+}
+
+#recetas figcaption {
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#recetas figure img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+@supports (object-fit: cover) {
+  #recetas figure img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+#recetas button {
+  font-size: 14px;
+  border-color: var(--marron);
+  color: var(--marron);
+  margin: 0;
+}
+
+.receta h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 20px 0;
+  color: var(--marron);
+}
+
+.receta p {
+  font-weight: 700;
+  font-size: 14px;
+  text-align: justify;
+}
+
+footer #encontranos {
+  display: grid;
+  grid-template-areas: "mapa mapa" "menu navegacion" "logo redes";
+  padding-bottom: 40px;
+  grid-template-columns: 40% 40%;
+  justify-content: space-evenly;
+  justify-items: center;
+}
+
+#logo-footer {
+  grid-area: logo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  padding: 0;
+  margin: 0;
+}
+
+#logo-footer img {
+  width: 70%;
+  max-width: 150px;
+  height: auto;
+}
+
+#mapa {
+  grid-area: mapa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  padding: 0 20px 20px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  min-width: 240px;
+}
+
+#mapa img {
+  max-width: 100%;
+  height: auto;
+}
+
+#mapa h5 {
+  padding-left: 0;
+  text-align: center;
+}
+
+#mapa span {
+  padding: 10px 0;
+}
+
+footer .menu {
+  grid-area: menu;
+  width: 90%;
+}
+
+footer .navegacion {
+  grid-area: navegacion;
+  width: 90%;
+}
+
+footer .redes {
+  grid-area: redes;
+  width: 90%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+footer .redes img {
+  width: 40px;
+  height: auto;
+  margin: 5px;
+}
+
+footer h4 {
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  color: white;
+  padding: 20px 0;
+}
+
+footer h5 {
+  padding-left: 30px;
+  width: 100%;
+  text-align: left;
+  font-weight: 200;
+  color: var(--dorado);
+}
+
+footer ul {
+  padding-left: 30px;
+  height: 175px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+}
+
+/** COMPONENTES */
+
+.boton-curvo {
+  border: solid 0;
+  height: 50px;
+  width: 200px !important;
+  border-radius: 25px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.75);
+  width: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.mas-info {
+  border: solid 2px;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 5px 20px;
+  border-radius: 2px;
+  background-color: transparent;
+  margin: 30px 0;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (min-width: 768px) {
+  :root {
+    --imagen: min(25vw, 250px);
+  }
+  header section {
+    grid-template-areas: "foto card";
+  }
+  header .foto {
+    grid-area: foto;
+    width: 50%;
+  }
+  header .card {
+    grid-area: card;
+    width: 50%;
+  }
+  #productos summary,
+  #destacados summary {
+    min-width: 50%;
+  }
+  #destacados summary {
+    max-width: 60%;
+  }
+  #destacados article {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  #productos article:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+  #productos article:nth-child(even) {
+    flex-direction: row;
+  }
+  #productos figure {
+    width: 50%;
+  }
+  #productos summary {
+    width: 50%;
+  }
+  #productos,
+  #destacados {
+    padding: 0;
+  }
+  footer #encontranos {
+    grid-template-areas: "logo menu navegacion redes mapa";
+    grid-template-columns: 20% 20% 20% 10% 30%;
+  }
+  footer #recetas {
+    flex-direction: row;
+  }
+}
